@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #F2F1ED;
+    --text-primary: #111111;
+    --text-secondary: #555555;
+    --accent-red: #E52B20;
+    --border-dark: #111111;
+    --border-subtle: #DCD9D0;
+    --dark-bg: #111111;
+  }
+
+  body {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'DM Mono', monospace;
+  }
+}
+
+/* High Density Brutalist Stroke Typography */
+.text-stroke-2 {
+  -webkit-text-stroke: 2px #111111;
+  color: transparent;
+  transition: all 0.25s ease;
+}
+
+.text-stroke-2:hover {
+  color: #111111;
+}
+
+.text-stroke-light {
+  -webkit-text-stroke: 2px #F2F1ED;
+  color: transparent;
+  transition: all 0.25s ease;
+}
+
+.text-stroke-light:hover {
+  color: #F2F1ED;
+}
+
+/* High Density Boxed Monospace Badge */
+.hd-badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  color: #111111;
+  padding: 2px 8px;
+  border: 1px solid #111111;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hd-badge-dark {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  background-color: #111111;
+  color: #F2F1ED;
+  padding: 2px 8px;
+  border: 1px solid #333333;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Subtle Technical Grid Background */
+.bg-tech-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(17, 17, 17, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
+}
+
+.bg-tech-grid-dark {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(242, 241, 237, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(242, 241, 237, 0.06) 1px, transparent 1px);
+}
+
+/* Terminal Cursor Blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-cursor-blink {
+  animation: blink 1s infinite;
+}
+
+/* High Density Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F2F1ED;
+  border-left: 1px solid #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E52B20;
+}
+
+/* Print Styles for Resume */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
+
